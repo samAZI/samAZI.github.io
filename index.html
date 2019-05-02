@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style/index.css">
+        <script type="text/javascript" src="modules/bankManager.js"></script>
+        <title>Bank Manager</title>
+    </header>
+    <body>
+        <div id="wrapper">
+            <!-- NAVBAR -->
+            <nav>
+                <a href="#" onclick="home()">Home</a>
+                <a href="#" onclick="balance()">Balance</a>
+                <a href="#" onclick="deposit()">Deposit</a>
+                <a href="#" onclick="withdrawal()">Withdrawal</a>
+                <a href="#" onclick="history()">History</a>
+            </nav>
+            <!-- HOME -->
+            <section id="home">
+                <h1>Hello dear customer</h1>
+                <p>Welcome, we are proud to present you our new customer bank management system.</p>
+                <p>You can start to make a deposit by <a href="#" onclick="deposit()">clicking here</a>.</p>
+            </section>
+            <!-- BALANCE -->
+            <section id="balance">
+                <h1>Balance</h1>
+                <p>Your balance amount is <span id="balanceAmount"></span>.</p>
+            </section>
+            <!-- DEPOSIT -->
+            <section id="deposit">
+                <h1>Deposit</h1>
+                <p>Here you can make a deposit.</p>
+                <div>
+                    <label>Deposit amount</label>
+                    <input id="depositInput" type="number"/>
+                    <button onclick="doDeposit()">do deposit</button>
+                </div>
+                <p>If you want to see your balance <a href="#" onclick="balance()">click here</a>.</p>
+            </section>
+            <!-- WITHDRAWAL-->
+            <section id="withdrawal">
+                <h1>Withdrawal</h1>
+                <p>Here you can make a withdrawal.</p>
+                <div>
+                    <label>Withdrawal amount</label>
+                    <input id="withdrawalInput" type="number"/>
+                    <button onclick="doWithdrawal()">do withdrawal</button>
+                </div>
+                <p>If you want to see your balance <a href="#" onclick="balance()">click here</a>.</p>
+            </section>
+            <!-- HISTORY -->
+            <section id="history">
+                <h1>History</h1>
+                <p>The most recent operation is first in the list.</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Operation</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                    </tr>
+                    </thead>
+                    <tbody id="historyList"></tbody>
+                </table>
+                <div></div>
+            </section>
+            <!-- FOOTER -->
+            <footer>
+                © 2019 Bank Account Management - Samy Azirou System, Inc. All Rights Reserved.
+            </footer>
+        </div>
+    </body>
+    <!-- Be sure to load module/bankManager.js before to include script/index.js -->
+    <script src="scripts/index.js"></script>
+</html>
